@@ -67,7 +67,7 @@
 //}
 
 
-//函数
+                                //函数
 //#include<stdio.h>
 //int Add(int a, int b) {
 //    return a + b;    //int z=0;z=a+b;return z;也可以
@@ -82,13 +82,49 @@
 
 
 //数组：一组相同类型元素的集合
+//#include<stdio.h>
+//int main() {
+//    int arr[10] = { 10,11,12,13,14,15,16,17,18,19 };      //数组有下标即序号，从零开始，第一个字符是0，第二个是,[]里也可以不写，会根据后面数组的数量判断
+//    int i = 0;
+//    while (i < 10) {
+//        printf("%d ", arr[i]);
+//        i++;
+//    }
+//    return 0;
+//}
+//#include<stdio.h>
+//#include<string.h>
+//int main() {
+//    char arr[4] = {'b','i','t'};                //[]里写3或者不写printf出来的都是随机值,或者用“bit”方式
+//    printf("%d", strlen(arr));
+//    return 0;
+//}
+            //比较两个数  常规:
+//#include<stdio.h>
+//int main() {
+//    int a, b;
+//    printf("请输入两个整数：");
+//        scanf_s("%d %d", &a, &b);
+//    if (a > b) {
+//        printf("%d", a);
+//    }
+//    else {
+//        printf("%d", b);
+//    }
+//    return 0;
+//}
+            //用函数实现:
 #include<stdio.h>
+int MAX(int x, int y) {
+    if (x > y)
+        return x;
+    else
+        return y;
+}
 int main() {
-    int arr[10] = { 10,11,12,13,14,15,16,17,18,19 };      //数组有下标即序号，从零开始，第一个字符是0，第二个是,[]里也可以不写，会根据后面数组的数量判断
-    int i = 0;
-    while (i < 10) {
-        printf("%d ", arr[i]);
-        i++;
-    }
+    int a, b;
+    scanf_s("%d %d", &a, &b);
+    int r = MAX(a, b);
+    printf("%d", r);
     return 0;
 }

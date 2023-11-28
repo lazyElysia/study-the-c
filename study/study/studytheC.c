@@ -1,13 +1,14 @@
+#define  _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //int main() {
 //    int n, num;
 //    int negative = 0, zero = 0, positive = 0;
 //    printf("请输入需要统计的数值个数：");
-//    scanf_s("%d", &n);
+//    scanf("%d", &n);
 //
 //    printf("请输入%d个整数：\n", n);
 //    for (int i = 0; i < n; i++) {
-//        scanf_s("%d", &num);
+//        scanf("%d", &num);
 //        if (num < 0) {
 //            negative++;
 //        }
@@ -74,7 +75,7 @@
 //}
 //int main() {
 //    int a, b;
-//    scanf_s("%d %d", &a, &b);
+//    scanf("%d %d", &a, &b);
 //    int sum = Add(a, b);
 //    printf("%d", sum);
 //    return 0;
@@ -104,7 +105,7 @@
 //int main() {
 //    int a, b;
 //    printf("请输入两个整数：");
-//        scanf_s("%d %d", &a, &b);
+//        scanf("%d %d", &a, &b);
 //    if (a > b) {
 //        printf("%d", a);
 //    }
@@ -123,7 +124,7 @@
 //}
 //int main() {
 //    int a, b;
-//    scanf_s("%d %d", &a, &b);
+//    scanf("%d %d", &a, &b);
 //    int r = MAX(a, b);
 //    printf("%d", r);
 //    return 0;
@@ -142,31 +143,78 @@
 
      //单目操作符
      // ! 逻辑反操作；-负值；+正值；sizeof操作数的类型长度（以字节为单位）；~对一个数的二进制按位取反；*间接访问操作符（解引用操作符）；（类型）强制类型转换
-#include<stdio.h>
-int main() {
-    //int flag = 0;              //0为假，非0为真      flag=0表示flag为假
-    //if (!flag) {               //则！flag表示真
-    //    printf("hao \n");               
-    //}
-    //int a = 10;
-    //double b = 3.00;
-    //printf("%d\n", sizeof(int));
-    //printf("%d %d\n", sizeof(a),sizeof(b));
-    //int arr[10] = { 0 };
-    //printf("%d\n", sizeof(arr));        //结果是40.一个int为4，有十个int，所以40.单位是字节
-    //printf("%d\n", sizeof(arr[0]));
-    //int a = 10;
-    //int b = a++;          //后置++，先使用，再++
-    //printf("%d\n", b);
-    //printf("%d\n", a);
-    /*int a = (int)3.14;
-    printf("%d\n", a);   */     //（类型）强制类型转换
-    /*int a = 10;
-    int b = 20;
-    int c = a > b ? a : b;        //条件操作符：exp1？exp2：exp3
-    printf("%d\n", c);*/
-    int a = 10, b = 20, c = 0;
-    int d = (c = a - b, a = b + c, c - 3);           //逗号表达式：从左到右依次计算，整个表达式的结果是最后一个表达式的结果。
-    printf("%d\n", d);
+//#include<stdio.h>
+//int main() {
+//    //int flag = 0;              //0为假，非0为真      flag=0表示flag为假
+//    //if (!flag) {               //则！flag表示真
+//    //    printf("hao \n");               
+//    //}
+//    //int a = 10;
+//    //double b = 3.00;
+//    //printf("%d\n", sizeof(int));
+//    //printf("%d %d\n", sizeof(a),sizeof(b));
+//    //int arr[10] = { 0 };
+//    //printf("%d\n", sizeof(arr));        //结果是40.一个int为4，有十个int，所以40.单位是字节
+//    //printf("%d\n", sizeof(arr[0]));
+//    //int a = 10;
+//    //int b = a++;          //后置++，先使用，再++
+//    //printf("%d\n", b);
+//    //printf("%d\n", a);
+//    /*int a = (int)3.14;
+//    printf("%d\n", a);   */     //（类型）强制类型转换
+//    /*int a = 10;
+//    int b = 20;
+//    int c = a > b ? a : b;        //条件操作符：exp1？exp2：exp3
+//    printf("%d\n", c);*/
+//    int a = 10, b = 20, c = 0;
+//    int d = (c = a - b, a = b + c, c - 3);           //逗号表达式：从左到右依次计算，整个表达式的结果是最后一个表达式的结果。
+//    printf("%d\n", d);
+//    return 0;
+//}
+
+
+//求最大公约数，最小公倍数
+//#include <stdio.h>
+//int main()
+//{
+//    int m, n, max, min, b, c;
+//    scanf("%d%d", &m, &n);
+//    c = m % n;
+//    b = m * n;
+//    while (c != 0)
+//    {
+//        m = n;
+//        n = c;
+//        c = m % n;
+//    }
+//    max = n;
+//    min = b / max;
+//    printf("\n最大公约数为：%d\n最小公倍数为：%d\n", max, min);
+//    return 0;
+//}
+
+//          反弹球
+#include <stdio.h>
+
+int main()
+{
+    int i = 0;
+    float M, N, sum = 0;
+
+    scanf("%f %f", &M, &N);
+
+    sum = M;	      //第一次下落高度
+
+    for (i = 1; i <= N; i++)
+    {
+        M /= 2;
+        if (i == N) {
+            break;
+        }
+        sum += 2 * M; //来回的路程之和
+    }
+
+    printf("%.2f %.2f", M, sum);
+
     return 0;
 }

@@ -194,27 +194,47 @@
 //}
 
 //          反弹球
-#include <stdio.h>
-
-int main()
-{
-    int i = 0;
-    float M, N, sum = 0;
-
-    scanf("%f %f", &M, &N);
-
-    sum = M;	      //第一次下落高度
-
-    for (i = 1; i <= N; i++)
-    {
-        M /= 2;
-        if (i == N) {
-            break;
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int i = 0;
+//    float M, N, sum = 0;
+//
+//    scanf("%f %f", &M, &N);
+//
+//    sum = M;	      //第一次下落高度
+//
+//    for (i = 1; i <= N; i++)
+//    {
+//        M /= 2;
+//        if (i == N) {
+//            break;
+//        }
+//        sum += 2 * M; //来回的路程之和
+//    }
+//
+//    printf("%.2f %.2f", M, sum);
+//
+//    return 0;
+//}
+//            求n之内的素数
+#include<stdio.h>
+#include<math.h>
+int main() {
+    int n;
+    scanf("%d", &n);
+    int i, j, x;
+    for (i = 2; i <= n; i++) {
+        x = sqrt(i);
+        for (j = 2; j <= x; j++) {
+            if (i % j == 0) {
+                break;
+            }
         }
-        sum += 2 * M; //来回的路程之和
+        if (j > x) {
+            printf("%d\n", i);
+        }
     }
-
-    printf("%.2f %.2f", M, sum);
-
     return 0;
 }

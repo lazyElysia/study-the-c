@@ -40,7 +40,7 @@
 
 
 
-//转义字符
+                                                                                            //转义字符
      // \?  在书写连续多个问号时使用，防止他们被解析成三字母词
      // \' 用于表示字符常量
      // \" 用于表示一个字符串内部的双引号
@@ -68,7 +68,7 @@
 //}
 
 
-                                //函数
+                                                                                  //函数
 //#include<stdio.h>
 //int Add(int a, int b) {
 //    return a + b;    //int z=0;z=a+b;return z;也可以
@@ -219,22 +219,58 @@
 //    return 0;
 //}
 //            求n之内的素数
+//#include<stdio.h>
+//#include<math.h>
+//int main() {
+//    int n;
+//    scanf("%d", &n);
+//    int i, j, x;
+//    for (i = 2; i <= n; i++) {
+//        x = sqrt(i);
+//        for (j = 2; j <= x; j++) {
+//            if (i % j == 0) {
+//                break;
+//            }
+//        }
+//        if (j > x) {
+//            printf("%d\n", i);
+//        }
+//    }
+//    return 0;
+//}
+
+
+//                                                                          关键字：C语言本身内置
+//auto break case char const continue default do double extern float for goto if int long register return s sizeof static struct switch typedef union unsigned void
+
+
+
+//   static:1.修饰局部变量     2.修饰全局变量      3.修饰函数   
+
+//static函数：修饰局部变量时局部变量出作用域后不会销毁，实质上是改变了变量的存储位置。（原来在栈区，变化后在静态区）
+
 #include<stdio.h>
-#include<math.h>
+void test() {
+    static int a = 1;
+    a++;
+    printf("%d ", a);
+}
 int main() {
-    int n;
-    scanf("%d", &n);
-    int i, j, x;
-    for (i = 2; i <= n; i++) {
-        x = sqrt(i);
-        for (j = 2; j <= x; j++) {
-            if (i % j == 0) {
-                break;
-            }
-        }
-        if (j > x) {
-            printf("%d\n", i);
-        }
+    int i = 0;
+    while (i < 10) {
+        test();
+        i++;
     }
     return 0;
 }
+
+//static修饰全局变量：修饰全局变量时，全局变量的外部链接属性会变为内部链接属性，其它的源文件（.c）不能使用这个全局变量。
+
+extern int val;    //extern为声明外部符号
+
+//static修饰函数
+
+
+
+
+

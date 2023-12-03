@@ -1,3 +1,2 @@
 ﻿  studytheC.c
-Q:\代码\github\study-the-c\study\study\studytheC.c(228,13): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
   study.vcxproj -> Q:\代码\github\study-the-c\study\x64\Debug\study.exe

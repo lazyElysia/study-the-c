@@ -249,26 +249,66 @@
 
 //static函数：修饰局部变量时局部变量出作用域后不会销毁，实质上是改变了变量的存储位置。（原来在栈区，变化后在静态区）
 
-#include<stdio.h>
-void test() {
-    static int a = 1;
-    a++;
-    printf("%d ", a);
-}
-int main() {
-    int i = 0;
-    while (i < 10) {
-        test();
-        i++;
-    }
-    return 0;
-}
+//#include<stdio.h>
+//void test() {
+//    static int a = 1;
+//    a++;
+//    printf("%d ", a);
+//}
+//int main() {
+//    int i = 0;
+//    while (i < 10) {
+//        test();
+//        i++;
+//    }
+//    return 0;
+//}
 
 //static修饰全局变量：修饰全局变量时，全局变量的外部链接属性会变为内部链接属性，其它的源文件（.c）不能使用这个全局变量。
 
-extern int val;    //extern为声明外部符号
+/*extern int val;*/    //extern为声明外部符号
 
 //static修饰函数
+
+
+                                                                     //指针
+//
+//#include<stdio.h>
+//int main() {
+//    int a = 10;                            //向内存申请4个字节，存储10
+//    &a;                                   //取地址操作符
+//    int* p = &a;                         //p为指针变量                *说明p为指针变量
+//    printf("%p\n", &a);
+//    *p = 20;                 //*p为解引用操作符，通过p中存放的地址找到p所指的对象，*p就额是p指向的对象
+//    printf("%d", a);
+//
+// /*   char ch = 'w';
+//    char* pc = &ch;
+//    printf("%p\n", &ch);*/
+//
+//    return 0;
+//}
+
+                     //指针变量的大小
+#include<stdio.h>
+int main() {
+    printf("%zd\n", sizeof(char*));
+    printf("%zd\n", sizeof(int*));
+    printf("%zd\n", sizeof(long*));
+    printf("%zd\n", sizeof(float*));
+    printf("%zd\n", sizeof(double*));
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

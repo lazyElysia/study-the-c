@@ -243,7 +243,7 @@
 //                                                                          关键字：C语言本身内置
 //auto break case char const continue default do double extern float for goto if int long register return s sizeof static struct switch typedef union unsigned void
 
-
+//                define不是关键字，是预处理指令
 
 //   static:1.修饰局部变量     2.修饰全局变量      3.修饰函数   
 
@@ -301,7 +301,7 @@ int main() {
 }
 
 
-
+//                     至此，初识C语言完
 
 
 

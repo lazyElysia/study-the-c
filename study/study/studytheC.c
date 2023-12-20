@@ -290,15 +290,15 @@
 //}
 
                      //指针变量的大小
-#include<stdio.h>
-int main() {
-    printf("%zd\n", sizeof(char*));
-    printf("%zd\n", sizeof(int*));
-    printf("%zd\n", sizeof(long*));
-    printf("%zd\n", sizeof(float*));
-    printf("%zd\n", sizeof(double*));
-    return 0;
-}
+//#include<stdio.h>
+//int main() {
+//    printf("%zd\n", sizeof(char*));
+//    printf("%zd\n", sizeof(int*));
+//    printf("%zd\n", sizeof(long*));
+//    printf("%zd\n", sizeof(float*));
+//    printf("%zd\n", sizeof(double*));
+//    return 0;
+//}
 
 
 //                     至此，初识C语言完

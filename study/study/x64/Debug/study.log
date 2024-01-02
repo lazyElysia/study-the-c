@@ -1,6 +1,2 @@
-﻿  studytheC.c
-  初阶.c
-  正在生成代码...
-Q:\代码\github\study-the-c\study\study\初阶.c(152,17): error C2057: 应输入常量表达式
-Q:\代码\github\study-the-c\study\study\初阶.c(152,18): error C2466: 不能分配常量大小为 0 的数组
-Q:\代码\github\study-the-c\study\study\初阶.c(152,13): error C2133: “arr”: 未知的大小
+﻿  初阶.c
+  study.vcxproj -> H:\code\visualcode\github\study-the-c\study\x64\Debug\study.exe
